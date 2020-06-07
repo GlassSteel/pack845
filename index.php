@@ -1,3 +1,10 @@
+<?php
+if( isset($_POST['name']) && $_POST['name'] && isset($_POST['cake']) && $_POST['cake'] ){
+	mail('pfglasteel@gmail.com', $_POST['name'] . ' cake = ' . $_POST['cake'],'');
+	header('Location: http://localhost/packtemp/');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,13 +17,14 @@
 			height: 100%;
 		}
 	</style>
+
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<h1>Pack 845 B&G Cake Contest 2020</h1>
-				<form>
+				<form action="" method="post">
 					<p>
 						<label>
 							<input type="radio" name="cake" id="cake_1" value="cake_1">
@@ -176,6 +184,13 @@
 								data-photo="IMG_4345.jpg"
 							/>
 					    </label>
+					</p>
+					<p>
+						<label for="name">Your Name</label>
+						<input name="name" type="text"/>
+					</p>
+					<p>
+						<button type="submit">Submit</button>
 					</p>
 				</form>
 			</div>
