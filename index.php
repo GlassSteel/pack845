@@ -1,10 +1,3 @@
-<?php
-if( isset($_POST['name']) && $_POST['name'] && isset($_POST['cake']) && $_POST['cake'] ){
-	mail('pfglasteel@gmail.com', $_POST['name'] . ' cake = ' . $_POST['cake'],'');
-	header('Location: http://localhost/packtemp/');
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -184,13 +177,6 @@ if( isset($_POST['name']) && $_POST['name'] && isset($_POST['cake']) && $_POST['
 								data-photo="IMG_4345.jpg"
 							/>
 					    </label>
-					</p>
-					<p>
-						<label for="name">Your Name</label>
-						<input name="name" type="text"/>
-					</p>
-					<p>
-						<button type="submit">Submit</button>
 					</p>
 				</form>
 			</div>
